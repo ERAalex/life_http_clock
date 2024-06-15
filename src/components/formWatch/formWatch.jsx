@@ -1,5 +1,6 @@
 
 import ListWatches from "./listWatch"
+import AddWatch from "./addWatch"
 import {useState} from 'react'
 import './css/formWatch.css'
 
@@ -25,6 +26,10 @@ export default function FormWatch({initialState}) {
         <div className='container mb-3' style={{width: '50vw', 
         position: 'absolute', left: '50%', backgroundColor: 'grey', translate: '-50%'}}>
             <ListWatches list={list} onRemove={handleDelete} />
+            <div>
+                <AddWatch onAddWatch={handleAddWatch} />
+            </div>
         </div>
+        
     )
 }
